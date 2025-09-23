@@ -176,9 +176,10 @@ public class studentGradeManagementSystem
 					System.out.println("The Student details are Successfully Deleted!!");
 				else 
 					System.out.println("The Student Id is Wrong. Please Enter a valid Id.");
+				break;
 				
 			case 5 :
-				System.out.println("You are Now Exiting!!!");
+				System.out.println("you are Exiting");
 				System.exit(0);
 				break;
 			
