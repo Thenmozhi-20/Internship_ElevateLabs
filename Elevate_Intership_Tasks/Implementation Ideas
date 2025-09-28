@@ -1,0 +1,53 @@
+Core Functional Methods
+
+Book Management:
+addBook(): Adds a new book to the catalog. 
+removeBook(): Deletes a book from the collection. 
+updateBook(): Modifies book details like title, author, etc. 
+searchBook(): Finds books by title, author, ISBN, or other criteria. 
+showAllBooks(): Displays a list of all books in the library
+
+User Management:
+registerUser(): Allows new users to create an account. 
+updateUser(): Modifies user profiles and personal information. 
+removeUser(): Deletes a user's record. 
+getUserInfo(): Retrieves a user's details. 
+
+Circulation Management:
+issueBook(): Records a book being checked out to a user. 
+returnBook(): Processes the return of a borrowed item. 
+renewBook(): Extends the due date for a borrowed book. 
+checkOutStatus(): Displays the status of borrowed books. 
+
+Fine and Account Management:
+calculateFine(): Determines the fine for overdue items. 
+collectFine(): Processes the payment of fines from users. 
+
+Search and Display:
+searchByAuthor(): A specific search for books by a particular author. 
+searchByTitle(): A specific search for books by their title. 
+
+
+If all users/entities behave the same way → We can directly use a Class.
+Example: 
+In a Library System, if all users borrow and return books in the same manner, then just one LibrarySystem class is 
+enough.
+
+If users/entities share some features but also have differences → We use an Abstract Class.
+Common features (name, ID, book count) are written once in the abstract class.
+Different features (like fine calculation rules for Student vs Teacher) are left as abstract methods, 
+and subclasses implement them. 
+This avoids repeating code and makes differences clear.
+
+If different systems follow the same rules but with their own implementations → We use an Interface.
+Interface only gives the method names (rules) like issueBook() and returnBook().
+Each system (LibrarySystem, VideoRentalSystem, ShopRentalSystem) implements those rules differently.
+This keeps systems flexible but consistent.
+
+Why we don’t put everything inside one class
+If we write all methods in one single class, it becomes messy:
+Difficult to identify which part belongs to which type of user/system.
+Hard to modify if new user/system comes later (you need to edit the same class again and again).
+Increases bugs and maintenance issues.
+
+That’s why we separate using Class, Abstract Class, and Interface depending on same/different behavior.
