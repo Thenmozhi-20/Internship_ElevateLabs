@@ -3,9 +3,7 @@ Core Functional Methods
 Book Management:
 addBook(): Adds a new book to the catalog. 
 removeBook(): Deletes a book from the collection. 
-updateBook(): Modifies book details like title, author, etc. 
 searchBook(): Finds books by title, author, ISBN, or other criteria. 
-showAllBooks(): Displays a list of all books in the library
 
 User Management:
 registerUser(): Allows new users to create an account. 
@@ -17,11 +15,6 @@ Circulation Management:
 issueBook(): Records a book being checked out to a user. 
 returnBook(): Processes the return of a borrowed item. 
 renewBook(): Extends the due date for a borrowed book. 
-checkOutStatus(): Displays the status of borrowed books. 
-
-Fine and Account Management:
-calculateFine(): Determines the fine for overdue items. 
-collectFine(): Processes the payment of fines from users. 
 
 Search and Display:
 searchByAuthor(): A specific search for books by a particular author. 
